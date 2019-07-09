@@ -12,7 +12,7 @@ describe("HelloWorld", () => {
     describe("Say hi", () => {
 
         it("should say Hi, somkiat", () => {
-            const result = tested.sayHi("somkiat");
+            const result = tested.sayHi("somkiasst");
             const expected = "Hi, somkiat";
             result.should.be.equal(expected);
         });
