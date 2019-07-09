@@ -1,0 +1,16 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "TDD with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "@types/mocha": "2.2.39",
+    "@types/should": "8.1.30",
+    "mocha": "3.2.0",
+    "should": "11.2.0",
+    "typescript": "2.1.6"
+  }
+}
