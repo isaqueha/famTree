@@ -51,7 +51,7 @@ export default class Nodes extends React.Component<{ nodes: d3Types.d3Node[], si
   }
 
   render() {
-    const color = d3.scaleOrdinal(d3.schemeCategory20);
+    const color = d3.scaleOrdinal(d3.schemeCategory10);
     const nodes = this.props.nodes.map((node: d3Types.d3Node, index: number) => {
       return <Node key={index} node={node} color={color(node.group.toString())} />;
     });

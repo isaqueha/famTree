@@ -1,14 +1,15 @@
-export namespace d3Types {
-  export type d3Node = {
-    id: string,
-    group: number
-  };
+import { SimulationNodeDatum, SimulationLinkDatum } from "d3";
 
-  export type d3Link = {
-    source: string,
-    target: string,
-    value: number
-  };
+export namespace d3Types {
+  export class d3Node implements SimulationNodeDatum {
+    group: number;
+    constructor (public id: string, public x: number = 1, public y: number = 2) {}
+  }
+
+  export class d3Link implements SimulationLinkDatum<d3Node> {
+    value: number;
+    constructor (public source: string, public target: string) {}
+  }
 
   export type d3Graph = {
     nodes: d3Node[],
