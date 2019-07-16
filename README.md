@@ -1,8 +1,9 @@
-# famTree
-Family Trees in TS and D3
+This project shows an example force graph using D3 with React and Typescript.
 
-## Links
+You can fork the project then run
+```
+npm install
+npm start
+```
 
-### D3
-https://spin.atomicobject.com/2017/07/20/d3-react-typescript/
-https://github.com/korydondzila/React-TypeScript-D3
+![image](force-graph.PNG?raw=true "Force Graph")
