@@ -3,31 +3,38 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "chai": "^4.2.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
     "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "mocha --compilers tsx:ts-node/register --recursive \"./tests/**/*test.ts*\" --require ignore-styles"
+    "test": "mocha -r ts-node/register tests/**/*test.ts*",
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
   },
   "dependencies": {
     "@types/chai": "^4.1.7",
     "@types/d3": "^5.7.2",
     "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/mocha": "^5.2.7",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
-    "chai": "^4.2.0",
     "d3": "^5.9.7",
     "enzyme": "^3.10.0",
     "enzyme-to-json": "^3.3.5",
-    "mocha": "^6.2.0",
+    "jsdom-global": "^3.0.2",
     "npm-check-updates": "^3.1.20",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-scripts-ts": "^3.1.0",
     "tslint": "^5.18.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.5.3"
+    "tslint-eslint-rules": "^5.4.0"
   }
 }
