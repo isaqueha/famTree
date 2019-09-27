@@ -16,7 +16,7 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "mocha -r ts-node/register tests/**/*test.ts*",
-    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
+    "coverage": "nyc -r lcov -e .tsx -x \"tests/**/*.test.ts*\" npm run test"
   },
   "dependencies": {
     "@types/chai": "^4.1.7",
