@@ -1,16 +1,36 @@
 import * as React from "react";
-import Element from "./Element";
 import Person from "./Person";
+import PhotoElement from "./PhotoElement";
 
-export default class Family extends Element {
-	photo: ImageBitmap;
-	isHouse: Boolean;
-	people: Person[];
+interface Props {
+}
 
-	render() {
-		return (
-			<g className="family">
-			</g>
-		);
-	}
+export default class Family extends PhotoElement {
+  _isHouse: Boolean = false;
+  _people: Array<Person> = new Array<Person>();
+  
+  constructor(props: Props) {
+    super(props);
+  }
+
+  get isHouse(): Boolean {
+    return this._isHouse;
+  }
+  set isHouse(newIsHouse:Boolean) {
+    this._isHouse = newIsHouse;
+  }
+
+  get people(): Array<Person> {
+    return this._people;
+  }
+  set people(newPeople:Array<Person>) {
+    this._people = newPeople;
+  }
+
+  render() {
+    return (
+      <g className="family">
+      </g>
+    );
+  }
 }

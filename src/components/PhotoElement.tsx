@@ -1,13 +1,19 @@
-import * as React from "react";
 import Element from "./Element";
 
+interface Props {
+}
+
 export default class PhotoElement extends Element {
-	photo: ImageBitmap;
-	
-	render() {
-		return (
-			<g className="photoElement">
-			</g>
-		);
-	}
+  _src: String = new String("");
+
+  constructor(props: Props) {
+    super(props);
+  }
+
+  get src(): String {
+    return this._src;
+  }
+  set src(newSrc:String) {
+    this._src = newSrc;
+  }
 }

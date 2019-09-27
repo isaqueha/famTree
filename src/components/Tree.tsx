@@ -1,14 +1,20 @@
-import * as React from "react";
 import Element from "./Element";
 import Family from "./Family";
 
-export default class Tree extends Element {
-	families: Family[];
+interface Props {
+}
 
-	render() {
-		return (
-			<g className="tree">
-			</g>
-		);
-	}
+export default class Tree extends Element {
+  _families: Array<Family> = new Array<Family>();
+
+  constructor(props: Props) {
+    super(props);
+  }
+
+  get families(): Array<Family> {
+    return this._families;
+  }
+  set families(newFamilies:Array<Family>) {
+    this._families = newFamilies;
+  }
 }

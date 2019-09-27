@@ -1,3 +1,10 @@
 export default class Gender {
-	type: String;
+  _type: String = new String("Undefined");
+
+  get type(): String {
+    return this._type;
+  }
+  set type(newType:String) {
+    this._type = newType;
+  }
 }
