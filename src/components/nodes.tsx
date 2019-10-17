@@ -3,7 +3,7 @@ import * as d3 from "d3";
 import { d3Types } from "../types";
 
 class Node extends React.Component<{ node: d3Types.d3Node, color: string }, {}> {
-  ref: SVGCircleElement;
+  ref: SVGRectElement;
 
   componentDidMount() {
     d3.select(this.ref).data([this.props.node]);
@@ -11,10 +11,10 @@ class Node extends React.Component<{ node: d3Types.d3Node, color: string }, {}> 
 
   render() {
     return (
-      <circle className="node" r={5} fill={this.props.color}
-        ref={(ref: SVGCircleElement) => this.ref = ref}>
+      <rect className="node" r={5} fill={this.props.color}
+        ref={(ref: SVGRectElement) => this.ref = ref}>
         <title>{this.props.node.id}</title>
-      </circle>
+      </rect>
     );
   }
 }

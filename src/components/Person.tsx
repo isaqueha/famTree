@@ -1,3 +1,4 @@
+import * as React from "react";
 import PhotoElement from "./PhotoElement";
 import Gender from "./Gender";
 
@@ -56,5 +57,12 @@ export default class Person extends PhotoElement {
   }
   set deceased(newDeceased:Boolean) {
     this._deceased = newDeceased;
+  }
+
+  render() {
+    return (
+      <p className="family">Person
+      </p>
+    );
   }
 }

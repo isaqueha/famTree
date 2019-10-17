@@ -7,10 +7,13 @@ interface Props {
 
 export default class Family extends PhotoElement {
   _isHouse: Boolean = false;
-  _people: Array<Person> = new Array<Person>();
+  _people: Array<Person>;
   
   constructor(props: Props) {
     super(props);
+    this._people = new Array<Person>();
+    this._people.push(new Person({}));
+    this._people.push(new Person({}));
   }
 
   get isHouse(): Boolean {
@@ -28,9 +31,15 @@ export default class Family extends PhotoElement {
   }
 
   render() {
+    const people = this._people.map((person) => {
+      return <Person />;
+    });
+    console.log(people);
+
     return (
-      <g className="family">
-      </g>
+      <div className="family">
+        {people}
+      </div>
     );
   }
 }

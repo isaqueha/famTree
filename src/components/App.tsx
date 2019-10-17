@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as d3 from 'd3';
 import { d3Types } from "../types";
 // import Links from "./links";
-// import Nodes from "./nodes";
+import Nodes from "./nodes";
 // import Labels from "./labels";
 import '../styles/App.css';
 import Family from './Family';
@@ -70,19 +70,22 @@ export default class App extends React.Component<Props, {}> {
   }
 
   render() {
-    // const { width, height, graph } = this.props;
+    const { width, height, graph } = this.props;
     // return (
     //   <svg className="container"
     //     width={width} height={height}>
     //     <Links links={graph.links} />
-    //     <Nodes nodes={graph.nodes} simulation={this.simulation} />
     //     <Labels nodes={graph.nodes} />
     //   </svg>
     // );
     return (
-      <svg className="container">
+      <div>
+        <svg className="container"
+          width={width} height={height}>
+          <Nodes nodes={graph.nodes} simulation={this.simulation} />
+        </svg>
         <Family />
-      </svg>
+      </div>
     );
   }
 }
