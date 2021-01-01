@@ -1,6 +1,6 @@
 {
-  "short_name": "App",
-  "name": "Create React App Sample",
+  "short_name": "WE Connect App",
+  "name": "WE Connect Sample",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
