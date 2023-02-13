@@ -30,7 +30,7 @@
     "enzyme": "^3.10.0",
     "enzyme-to-json": "^3.3.5",
     "jsdom-global": "^3.0.2",
-    "npm-check-updates": "^3.1.20",
+    "npm-check-updates": "^16.7.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-scripts-ts": "^4.0.8",
